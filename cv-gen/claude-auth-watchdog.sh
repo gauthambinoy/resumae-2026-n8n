@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Claude CLI OAuth watchdog — alerts via Telegram if auth dies.
 set -u
-TG_TOKEN="${TG_TOKEN:-}"   # backup copy: real token redacted — set via env/secret store on restore
-TG_CHAT="${TG_CHAT:-}"     # backup copy: real chat id redacted — set via env/secret store on restore
+TG_TOKEN=""
+TG_CHAT=""
 STATE=/home/ubuntu/cv-gen/.claude-auth-state
 LOG=/home/ubuntu/cv-gen/claude-auth-watchdog.log
 TS="$(date -u +%FT%TZ)"

@@ -12,7 +12,7 @@ ERR="$OUTPUT_DIR/$JOB_ID.mimo.stderr"
 STDOUT="$OUTPUT_DIR/$JOB_ID.mimo.stdout"
 mkdir -p "$OUTPUT_DIR"
 
-OPENROUTER_KEY="${OPENROUTER_KEY:-}"   # backup copy: real key redacted — set OPENROUTER_KEY via env/secret store
+OPENROUTER_KEY="${OPENROUTER_KEY:-}"
 MIMO_MODEL="${MIMO_MODEL:-xiaomi/mimo-v2-flash}"
 
 emit_failure(){ jq -cn --arg e "$1" --arg j "$JOB_ID" '{ok:false,error:$e,job_id:$j}'; }
