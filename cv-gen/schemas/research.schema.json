@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Research CV Output \u2014 5 entries x 4/3/3/3/3 bullets, tagline, 5 skills, 3 projects, 4 certs, extras, scores",
+  "type": "object",
+  "required": [
+    "meta",
+    "cv_content",
+    "extras",
+    "scores"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role_title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "template_used": {
+          "type": "string",
+          "const": "research"
+        },
+        "location": {
+          "type": "string"
+        },
+        "seniority": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "company",
+        "role_title",
+        "template_used",
+        "location",
+        "seniority"
+      ]
+    },
+    "cv_content": {
+      "type": "object",
+      "properties": {
+        "professional_tagline": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 90
+        },
+        "professional_summary": {
+          "type": "string",
+          "minLength": 80
+        },
+        "role_1_bullets": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 60
+          }
+        },
+        "role_2_bullets": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 60
+          }
+        },
+        "role_3_bullets": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 60
+          }
+        },
+        "role_4_bullets": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 60
+          }
+        },
+        "role_5_bullets": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 60
+          }
+        },
+        "skill_1_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill_1_content": {
+          "type": "string",
+          "minLength": 10
+        },
+        "skill_2_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill_2_content": {
+          "type": "string",
+          "minLength": 10
+        },
+        "skill_3_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill_3_content": {
+          "type": "string",
+          "minLength": 10
+        },
+        "skill_4_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill_4_content": {
+          "type": "string",
+          "minLength": 10
+        },
+        "skill_5_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill_5_content": {
+          "type": "string",
+          "minLength": 10
+        },
+        "project_1_title": {
+          "type": "string",
+          "minLength": 3
+        },
+        "project_1_desc": {
+          "type": "string",
+          "minLength": 20
+        },
+        "project_2_title": {
+          "type": "string",
+          "minLength": 3
+        },
+        "project_2_desc": {
+          "type": "string",
+          "minLength": 20
+        },
+        "project_3_title": {
+          "type": "string",
+          "minLength": 3
+        },
+        "project_3_desc": {
+          "type": "string",
+          "minLength": 20
+        },
+        "certifications": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 3
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "professional_tagline",
+        "professional_summary",
+        "role_1_bullets",
+        "role_2_bullets",
+        "role_3_bullets",
+        "role_4_bullets",
+        "role_5_bullets",
+        "skill_1_label",
+        "skill_1_content",
+        "skill_2_label",
+        "skill_2_content",
+        "skill_3_label",
+        "skill_3_content",
+        "skill_4_label",
+        "skill_4_content",
+        "skill_5_label",
+        "skill_5_content",
+        "project_1_title",
+        "project_1_desc",
+        "project_2_title",
+        "project_2_desc",
+        "project_3_title",
+        "project_3_desc",
+        "certifications"
+      ]
+    },
+    "extras": {
+      "type": "object",
+      "properties": {
+        "jd_analysis": {
+          "type": "string",
+          "minLength": 50
+        },
+        "jd_breakdown": {
+          "type": "string",
+          "minLength": 50
+        },
+        "linkedin_connection": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 200
+        },
+        "linkedin_followup": {
+          "type": "string",
+          "minLength": 10
+        },
+        "linkedin_inmail": {
+          "type": "string",
+          "minLength": 10
+        },
+        "top_job_titles": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "minLength": 3
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "jd_analysis",
+        "jd_breakdown",
+        "linkedin_connection",
+        "linkedin_followup",
+        "linkedin_inmail",
+        "top_job_titles"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "interview_promise": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "ai_detection_risk": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "ats_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "skills_without_bullet_proof": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "interview_promise",
+        "ai_detection_risk",
+        "ats_coverage",
+        "skills_without_bullet_proof"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

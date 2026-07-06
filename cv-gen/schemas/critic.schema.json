@@ -1,0 +1,573 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "verdict",
+    "overall_score",
+    "interview_promise",
+    "ai_detection_risk_pct",
+    "ats_keyword_density_pct",
+    "skills_tools_coverage_pct",
+    "human_voice_score",
+    "recruiter_verdict",
+    "recruiter_reason",
+    "recruiter_7s_verdict",
+    "recruiter_7s_reason",
+    "recruiter_8s_verdict",
+    "recruiter_8s_reason",
+    "keyword_gap",
+    "layout_risk",
+    "rule_scores",
+    "bullet_judgments",
+    "weakest_bullets",
+    "missing_jd_keywords",
+    "missing_domain_phrases",
+    "skills_without_bullet_proof",
+    "ai_text_flags",
+    "summary_diagnosis",
+    "jd_coverage",
+    "jd_coverage_pct",
+    "skills_proof_of_use_pct",
+    "blend_ratio",
+    "blend_score",
+    "anchor4_used",
+    "rewrite_scope",
+    "blocker_count",
+    "cert_realism_check",
+    "source_tags_audit",
+    "panel_min_score",
+    "panel_top3_count",
+    "worst_persona",
+    "worst_persona_blocker",
+    "recruiter_panel",
+    "fixes"
+  ],
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "REWRITE",
+        "ACCEPT",
+        "REJECT"
+      ]
+    },
+    "overall_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "interview_promise": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "ai_detection_risk_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "ats_keyword_density_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "skills_tools_coverage_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "human_voice_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "recruiter_verdict": {
+      "type": "string",
+      "enum": [
+        "forward",
+        "bin"
+      ]
+    },
+    "recruiter_reason": {
+      "type": "string"
+    },
+    "recruiter_7s_verdict": {
+      "type": "string",
+      "enum": [
+        "forward",
+        "bin"
+      ]
+    },
+    "recruiter_7s_reason": {
+      "type": "string"
+    },
+    "recruiter_8s_verdict": {
+      "type": "string",
+      "enum": [
+        "forward",
+        "bin"
+      ]
+    },
+    "recruiter_8s_reason": {
+      "type": "string"
+    },
+    "keyword_gap": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "layout_risk": {
+      "type": "string"
+    },
+    "rule_scores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "rule",
+          "score",
+          "fails"
+        ],
+        "properties": {
+          "rule": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          },
+          "fails": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "bullet_judgments": {
+      "type": "array",
+      "description": "One entry per bullet across the entire CV. Required: per-bullet diagnostic with concrete fix.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "bullet_id",
+          "role",
+          "current_text",
+          "specificity",
+          "jd_alignment",
+          "realism",
+          "ai_risk",
+          "violated_rules",
+          "problems",
+          "missing_tools",
+          "missing_ats_keywords",
+          "why_diff_from_instruction",
+          "suggested_rewrite"
+        ],
+        "properties": {
+          "bullet_id": {
+            "type": "string",
+            "description": "e.g. role_1_b2 or summary_s1"
+          },
+          "role": {
+            "type": "string"
+          },
+          "current_text": {
+            "type": "string"
+          },
+          "specificity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "jd_alignment": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "realism": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "ai_risk": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "violated_rules": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "e.g. CR1, CR2, CR4-T7-twice, banned-word:utilized"
+            }
+          },
+          "problems": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "missing_tools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "missing_ats_keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "why_diff_from_instruction": {
+            "type": "string",
+            "description": "One line: which master rule or JD requirement this bullet fails and why."
+          },
+          "suggested_rewrite": {
+            "type": "string",
+            "description": "A concrete replacement bullet that fixes every problem listed. Must obey CR1-CR5."
+          }
+        }
+      }
+    },
+    "weakest_bullets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "location",
+          "score",
+          "reason",
+          "fix_directive"
+        ],
+        "properties": {
+          "location": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "fix_directive": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "missing_jd_keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_domain_phrases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "skills_without_bullet_proof": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ai_text_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary_diagnosis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "problems",
+        "suggested_rewrite"
+      ],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "problems": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggested_rewrite": {
+          "type": "string"
+        }
+      }
+    },
+    "jd_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "covered": {
+            "type": "boolean"
+          },
+          "locations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "responsibility",
+              "tool",
+              "process",
+              "certification"
+            ]
+          }
+        },
+        "required": [
+          "item",
+          "covered",
+          "locations",
+          "category"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "jd_coverage_pct": {
+      "type": "number"
+    },
+    "skills_proof_of_use_pct": {
+      "type": "number"
+    },
+    "blend_ratio": {
+      "type": "number"
+    },
+    "blend_score": {
+      "type": "number"
+    },
+    "anchor4_used": {
+      "type": "boolean"
+    },
+    "rewrite_scope": {
+      "type": "string",
+      "enum": [
+        "none",
+        "surgical",
+        "moderate",
+        "full"
+      ]
+    },
+    "blocker_count": {
+      "type": "integer"
+    },
+    "cert_realism_check": {
+      "type": "object",
+      "properties": {
+        "all_real": {
+          "type": "boolean"
+        },
+        "suspicious": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "all_real",
+        "suspicious"
+      ],
+      "additionalProperties": false
+    },
+    "source_tags_audit": {
+      "type": "object",
+      "properties": {
+        "missing_count": {
+          "type": "integer"
+        },
+        "missing_locations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "missing_count",
+        "missing_locations"
+      ],
+      "additionalProperties": false
+    },
+    "panel_min_score": {
+      "type": "integer"
+    },
+    "panel_top3_count": {
+      "type": "integer"
+    },
+    "worst_persona": {
+      "type": "string"
+    },
+    "worst_persona_blocker": {
+      "type": "string"
+    },
+    "recruiter_panel": {
+      "type": "object",
+      "properties": {
+        "recruiter_8s": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "top3": {
+              "type": "boolean"
+            },
+            "blocker": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "top3",
+            "blocker"
+          ],
+          "additionalProperties": false
+        },
+        "hiring_manager": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "top3": {
+              "type": "boolean"
+            },
+            "blocker": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "top3",
+            "blocker"
+          ],
+          "additionalProperties": false
+        },
+        "ats_bot": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "top3": {
+              "type": "boolean"
+            },
+            "blocker": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "top3",
+            "blocker"
+          ],
+          "additionalProperties": false
+        },
+        "skeptical_peer": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "top3": {
+              "type": "boolean"
+            },
+            "blocker": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "top3",
+            "blocker"
+          ],
+          "additionalProperties": false
+        },
+        "final_decision_maker": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "top3": {
+              "type": "boolean"
+            },
+            "blocker": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "top3",
+            "blocker"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "recruiter_8s",
+        "hiring_manager",
+        "ats_bot",
+        "skeptical_peer",
+        "final_decision_maker"
+      ],
+      "additionalProperties": false
+    },
+    "fixes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "fix_directive": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "blocker",
+              "major",
+              "minor"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "issue",
+          "fix_directive",
+          "severity"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

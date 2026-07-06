@@ -1,0 +1,551 @@
+{
+ "experiences": [
+  {
+   "company": "Outliner AI",
+   "titles": [
+    "Full Stack AI Engineer",
+    "AI Engineer",
+    "ML Engineer",
+    "GenAI Engineer",
+    "AI Software Engineer",
+    "Software Engineer",
+    "Backend Engineer",
+    "Python Developer"
+   ],
+   "start": "May 2025",
+   "end": "May 2026",
+   "location": "Ireland (Hybrid)",
+   "domains": [
+    "AI/LLM",
+    "RAG",
+    "Agents",
+    "Full-stack",
+    "Python",
+    "AWS",
+    "LangChain",
+    "LlamaIndex",
+    "OpenAI",
+    "Anthropic",
+    "Pinecone",
+    "FAISS",
+    "Python",
+    "FastAPI",
+    "Django",
+    "React",
+    "Node.js",
+    "TypeScript",
+    "AWS",
+    "Docker"
+   ],
+   "notes": "• Designed, built and shipped production AI/LLM products end-to-end - conversational assistants, autonomous agents and Retrieval-Augmented Generation (RAG) systems\n• Architected agentic workflows with LangChain and LlamaIndex plus custom orchestration for planning, tool selection and multi-step reasoning\n• Integrated frontier LLMs via the OpenAI and Anthropic (Claude) SDKs with model routing, fallback and multi-provider abstraction\n• Built RAG pipelines over Pinecone and FAISS vector databases for semantic search, similarity retrieval and grounded, source-cited answers\n• Engineered the retrieval layer: embeddings generation, chunking strategies, metadata filtering and rerankers to boost relevance and reduce hallucinations\n• Implemented agent tool-calling / function-calling with strict argument validation, guardrails and safety controls\n• Designed evaluation and testing loops for LLM outputs (accuracy, groundedness, regression checks) to keep quality stable across releases\n• Added token streaming, retries and graceful fallbacks for reliable, low-latency user experiences\n• Built scalable Python backends and REST APIs with FastAPI and Django\n• Developed responsive full-stack web apps with React, TypeScript and Node.js\n• Created reusable component libraries and polished, accessible UIs with TailwindCSS\n• Designed clean service boundaries, request validation and structured error handling across the API layer\n• Containerised services with Docker and shipped through automated CI/CD pipelines\n• Deployed and operated workloads on AWS with production monitoring, logging and observability\n• Applied prompt engineering, model selection and context-window management for quality and cost control\n• Optimised inference cost and latency through caching, token efficiency and choosing the right model per task\n• Owned features from idea to release, working directly with founders, designers and clients\n• Iterated quickly in a hybrid contract team, balancing delivery speed with production reliability • Ship end-to-end and own it in production\n• Production-first: tests, evals, monitoring and cost\n• Ground LLMs in real data - RAG over guessing\n• Guardrails and validation on every agent action\n• Iterate fast with founders, measure, then harden\n• Prefer reliable, proven tech over novelty\n• Keep code clean, typed and reviewable MOST RECENT (Contract, Hybrid)",
+   "most_recent": true
+  },
+  {
+   "company": "Napblog",
+   "titles": [
+    "AI Automation Engineer",
+    "Automation Engineer",
+    "AI Engineer"
+   ],
+   "start": "Aug 2024",
+   "end": "Jun 2025",
+   "location": "Ireland (Hybrid)",
+   "domains": [
+    "AI automation",
+    "Agents",
+    "Python",
+    "LLM",
+    "OpenAI",
+    "LangChain",
+    "Python",
+    "FastAPI",
+    "serverless"
+   ],
+   "notes": "• Built AI-powered automation systems that replaced repetitive manual work across content workflows, data pipelines and daily operations\n• Designed multi-step agent workflows that plan, decide and execute across tools and APIs autonomously\n• Applied orchestration patterns - sequential chains, conditional routing and multi-stage pipelines - to coordinate LLM steps\n• Integrated the OpenAI SDK and LangChain into end-to-end, self-running pipelines\n• Connected third-party services and REST APIs, handling auth, webhooks and event triggers\n• Developed backend automation in Python with FastAPI endpoints and serverless functions\n• Built scheduled and event-driven jobs so workflows ran reliably without manual intervention\n• Added retries, exponential backoff and idempotency to make automations resilient to failures\n• Implemented structured logging, monitoring and alerting so failures surfaced early\n• Handled robust error handling and graceful degradation across external API calls\n• Applied prompt engineering and model selection to get reliable, structured LLM outputs\n• Parsed and validated LLM responses into typed, machine-usable data for downstream steps\n• Transformed and moved data between systems as part of automated content and ops pipelines\n• Optimised token usage and API cost across high-volume automation runs\n• Measured before/after impact to prove time saved and reliability gained\n• Worked closely with founders to prioritise and ship the highest-value automations fast\n• Documented workflows and runbooks so systems stayed maintainable by the team • Automate the boring, repetitive work reliably\n• Small, composable, testable steps\n• Design for failure: retries, idempotency, alerts\n• Measure before/after to prove impact\n• Prompt, evaluate, then harden\n• Ship weekly and iterate with founders Internship",
+   "most_recent": false
+  },
+  {
+   "company": "Cochin Enterprise",
+   "titles": [
+    "Data Engineer",
+    "ML Data Engineer",
+    "Data Analyst",
+    "Analytics Engineer"
+   ],
+   "start": "Dec 2022",
+   "end": "May 2024",
+   "location": "India (Hybrid)",
+   "domains": [
+    "Data",
+    "ETL",
+    "SQL",
+    "Pipelines",
+    "Python",
+    "SQL",
+    "cloud storage",
+    "ETL",
+    "relational + analytical DBs"
+   ],
+   "notes": "• Built and maintained robust ETL data pipelines powering analytics, reporting and business-critical decisions\n• Designed ingestion, cleaning and transformation workflows in Python and SQL to process large datasets at scale\n• Modeled relational and analytical (OLAP) databases, including dimensional and star-schema designs tuned for performance and clear business meaning\n• Wrote advanced SQL - complex joins, aggregations, CTEs, window functions and subqueries - for reporting and analytics\n• Optimised query performance through indexing, query tuning and profiling of slow queries\n• Implemented batch and incremental load patterns to keep datasets fresh efficiently\n• Landed and organised raw and processed data in cloud storage as part of a layered data flow\n• Built data-quality validation, deduplication and reconciliation checks to catch bad rows before they reached reports\n• Added schema and constraint validation to protect downstream data integrity\n• Set up pipeline scheduling, monitoring and failure alerts for reliable daily runs\n• Built dashboards and reporting data products that turned raw data into actionable insight\n• Created clean, well-modeled data marts and views to make data self-serve for analysts\n• Translated stakeholder and operational needs into queryable, well-documented data assets\n• Tuned data models and queries for both transactional and analytical workloads\n• Documented schemas, data dictionaries and runbooks for the team\n• Version-controlled SQL and pipeline code in Git for repeatable, reviewable changes\n• Partnered with business teams to define metrics, KPIs and reporting requirements • Correctness first - data-quality gates before delivery\n• Model data for clear business meaning\n• Tune the slow queries, index with intent\n• Make data self-serve for analysts\n• Monitor pipelines and alert on failure\n• Version and document everything in Git Foundations that later powered AI systems",
+   "most_recent": false
+  },
+  {
+   "company": "One Team Solutions Edtech",
+   "titles": [
+    "Full-Stack Developer",
+    "Software Engineer",
+    "Frontend Engineer",
+    "Web Developer",
+    "Backend Engineer"
+   ],
+   "start": "Aug 2022",
+   "end": "Sep 2023",
+   "location": "Kochi, India (On-site)",
+   "domains": [
+    "Full-stack web",
+    "Frontend",
+    "Backend",
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Python",
+    "Django",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB"
+   ],
+   "notes": "• Built full-stack web applications across multiple education and enterprise client projects\n• Developed responsive, accessible UIs with React, JavaScript (ES6+), HTML5 and CSS3\n• Built reusable, component-based frontends with React hooks and shared UI libraries\n• Managed client-side state and data flow across complex interactive interfaces\n• Engineered backend services and REST APIs with Python (Django) and Node.js\n• Designed and integrated relational (PostgreSQL) and NoSQL (MongoDB) databases\n• Modeled schemas, wrote queries and tuned data access for both SQL and document stores\n• Implemented authentication, sessions and role-based access control (RBAC)\n• Built and consumed REST APIs and integrated third-party services and data providers\n• Added form handling, client- and server-side validation and robust error states\n• Ensured cross-browser compatibility and mobile-responsive layouts\n• Converted design mockups into pixel-accurate, production UI\n• Optimised frontend performance through lazy loading, asset optimisation and faster load times\n• Owned end-to-end deployment workflows and release of client apps\n• Used Git for version control and collaborated through code review\n• Worked in Agile sprints with designers and product owners on tight timelines\n• Balanced speed, quality and client expectations across parallel projects • Ship polished products on deadline\n• Reusable, component-based UI\n• Clean, well-documented REST APIs\n• Accessible and responsive by default\n• Keep clients in the loop and iterate\n• Test and review before release On-site",
+   "most_recent": false
+  },
+  {
+   "company": "Sappio Consultancy",
+   "titles": [
+    "Cloud Engineer",
+    "DevOps Engineer",
+    "AWS Engineer",
+    "Platform Engineer",
+    "Cloud/Infra Engineer"
+   ],
+   "start": "Feb 2021",
+   "end": "Aug 2022",
+   "location": "Kochi, India (On-site)",
+   "domains": [
+    "Cloud",
+    "AWS",
+    "DevOps",
+    "IaC",
+    "AWS",
+    "EC2",
+    "S3",
+    "Lambda",
+    "RDS",
+    "IAM",
+    "VPC",
+    "CloudWatch",
+    "CI/CD",
+    "IaC",
+    "Linux"
+   ],
+   "notes": "• Designed, deployed and managed AWS cloud infrastructure for client-facing applications across industries\n• Provisioned and operated core AWS services - EC2, S3, Lambda, RDS, IAM, VPC and CloudWatch - for secure, reliable environments\n• Automated deployments and environment provisioning through CI/CD pipelines and infrastructure-as-code (IaC)\n• Wrote infrastructure-as-code templates for repeatable, version-controlled environment builds\n• Built and maintained CI/CD pipelines to automate build, test and release\n• Designed VPC networking - subnets, route tables, security groups, NACLs and DNS - for isolated, secure topologies\n• Configured load balancing and auto-scaling for high availability and resilient production workloads\n• Managed relational databases on RDS including backups, replication and failover\n• Deployed serverless functions on AWS Lambda for event-driven workloads\n• Hardened security with least-privilege IAM roles and policies, secrets management and network controls\n• Set up monitoring, logging, dashboards and alerting with CloudWatch\n• Drove cloud cost optimisation - right-sizing, S3 lifecycle policies and idle-resource cleanup\n• Performed Linux system administration, Bash/shell scripting and troubleshooting\n• Automated repetitive operational tasks with scripts to reduce manual toil\n• Supported cloud migrations, architecture reviews and best-practice implementation\n• Used Git for version control of infrastructure and deployment code\n• Improved reliability through performance tuning, backups and disaster-recovery planning\n• Built strong foundations in distributed systems, networking and cloud security • Infrastructure-as-code, no click-ops\n• Least privilege and security by default\n• Automate every deploy\n• Watch the bill - right-size and clean up\n• Monitor, alert and plan for failure\n• Version infrastructure in Git Part-time",
+   "most_recent": false
+  }
+ ],
+ "education": [
+  {
+   "degree": "MSc",
+   "field": "Information Systems with Computing (NFQ Level 9, 90 ECTS)",
+   "institution": "Dublin Business School (DBS)",
+   "start": "Sep 2023",
+   "end": "Oct 2025",
+   "location": "Dublin, Ireland",
+   "modules": "Programming for Information Systems (Python), Advanced Databases (relational SQL + NoSQL, data modelling, schema design, query optimisation), Data Analytics & Visualisation, Big Data & Cloud Analytics (AWS), Computer Systems Security, Web & Mobile Technologies, Enterprise Information Systems, Networks & Systems Administration, Web Development for Information Systems, Applied Research Methods",
+   "tools": "Python, advanced SQL (querying, database design, optimisation), NoSQL databases, big-data analytics on AWS (data ingestion, distributed processing/ETL, analytical querying, visualisation), cloud architecture, data analytics & visualisation, information & systems security, web & mobile development, networking & systems administration, enterprise IS architecture, applied research & academic writing",
+   "thesis": "Big Data Analysis on AWS — applied-research MSc dissertation that designed, built and evaluated a cloud-native big-data analytics pipeline on Amazon Web Services end to end: large-scale data ingestion and storage, distributed processing and ETL, and analytical querying and visualisation of high-volume datasets, with a comparative evaluation of the performance, scalability and cost trade-offs of AWS's managed analytics services. Brought together data engineering, cloud architecture and applied research methods on a single real problem.",
+   "big_project": "Dissertation / Applied Research Project — supervised independent research applying the taught stage to a real information-systems problem",
+   "highlights": "Information Systems with Computing (NFQ Level 9, 90 ECTS) | modules: Programming for Information Systems (Python), Advanced Databases (relational SQL + NoSQL, data modelling, schema design, query optimisation), Data Analytics & Visualisation, Big Data & Cloud Analytics (AWS), Computer Systems Security, Web & Mobile Technologies, Enterprise Information Systems, Networks & Systems Administration, Web Development for Information Systems, Applied Research Methods | tools: Python, advanced SQL (querying, database design, optimisation), NoSQL databases, big-data analytics on AWS (data ingestion, distributed processing/ETL, analytical querying, visualisation), cloud architecture, data analytics & visualisation, information & systems security, web & mobile development, networking & systems administration, enterprise IS architecture, applied research & academic writing | thesis: Big Data Analysis on AWS — applied-research MSc dissertation that designed, built and evaluated a cloud-native big-data analytics pipeline on Amazon Web Services end to end: large-scale data ingestion and storage, distributed processing and ETL, and analytical querying and visualisation of high-volume datasets, with a comparative evaluation of the performance, scalability and cost trade-offs of AWS's managed analytics services. Brought together data engineering, cloud architecture and applied research methods on a single real problem. | project: Dissertation / Applied Research Project — supervised independent research applying the taught stage to a real information-systems problem | Full-time one-year NFQ Level 9 Masters (90 ECTS): nine taught modules plus a supervised applied-research dissertation on big-data analytics on AWS. Spanned hands-on Python programming, relational and NoSQL database engineering, cloud data pipelines, data visualisation, systems security and enterprise information-systems architecture — theory paired throughout with real delivery, as the degree was completed while shipping production AI, cloud and full-stack projects in parallel."
+  },
+  {
+   "degree": "Diploma",
+   "field": "AI/ML Full-Stack Development with Python",
+   "institution": "One Team Solutions",
+   "start": "Jul 2023",
+   "end": "Sep 2023",
+   "location": "Kochi, India",
+   "modules": "Python programming, machine-learning foundations, full-stack web development, REST API development with FastAPI, frontend development with React",
+   "tools": "Python, machine learning, FastAPI, React, REST APIs, JavaScript, HTML/CSS",
+   "thesis": "",
+   "big_project": "",
+   "highlights": "AI/ML Full-Stack Development with Python | modules: Python programming, machine-learning foundations, full-stack web development, REST API development with FastAPI, frontend development with React | tools: Python, machine learning, FastAPI, React, REST APIs, JavaScript, HTML/CSS | Intensive, project-based programme in AI/ML and full-stack Python engineering — building models and end-to-end web applications with FastAPI and React. Completed alongside the full-stack developer role at One Team Solutions, forming the deliberate bridge from web development into professional AI/ML engineering that the later Napblog and Outliner AI roles were built on."
+  },
+  {
+   "degree": "BCA",
+   "field": "Bachelor of Computer Applications — Mobile Apps & Cloud Technology",
+   "institution": "Sacred Heart College, Thevara",
+   "start": "Mar 2019",
+   "end": "Jul 2022",
+   "location": "Kochi, Kerala, India",
+   "modules": "Programming fundamentals (Java), Android mobile application development, cloud technology fundamentals, databases & SQL, web technologies, computer networks, software engineering",
+   "tools": "Java, Android, cloud fundamentals, SQL, HTML/CSS/JavaScript",
+   "thesis": "",
+   "big_project": "Blend — final-year capstone: a full learning management system (LMS) for colleges, built end to end. Covered course and content management, student enrolment and profiles, assignment submission with assessment and grading, announcements and notifications, and role-based access for students, faculty and administrators — a real multi-user platform bringing a college's teaching, coursework and student administration into one system.",
+   "highlights": "Bachelor of Computer Applications — Mobile Apps & Cloud Technology | modules: Programming fundamentals (Java), Android mobile application development, cloud technology fundamentals, databases & SQL, web technologies, computer networks, software engineering | tools: Java, Android, cloud fundamentals, SQL, HTML/CSS/JavaScript | project: Blend — final-year capstone: a full learning management system (LMS) for colleges, built end to end. Covered course and content management, student enrolment and profiles, assignment submission with assessment and grading, announcements and notifications, and role-based access for students, faculty and administrators — a real multi-user platform bringing a college's teaching, coursework and student administration into one system. | Three-year undergraduate degree specialising in mobile application development and cloud technology, with a capstone LMS (Blend) delivered end to end. The foundation for the cloud engineering role at Sappio Consultancy, which overlapped the final degree years — degree theory and paid production work reinforcing each other."
+  }
+ ],
+ "projects": [
+  {
+   "name": "Personal Portfolio — Hand-Coded Cinematic Site",
+   "type": "Frontend Web App",
+   "domains": [
+    "Frontend Web App"
+   ],
+   "stack": [
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES2020+)",
+    "GSAP 3",
+    "ScrollTrigger",
+    "Lenis",
+    "Splitting.js",
+    "GitHub Pages"
+   ],
+   "core_idea": "Hand-coded personal portfolio site with cinematic animations and a custom six-layer cursor — no frameworks, no build step.",
+   "problem": "Template-built portfolio sites all look the same and hide whether the author can actually write frontend code; this one proves it with pure hand-written HTML, CSS and JavaScript.",
+   "features": "Custom six-layer cursor | GSAP 3 + ScrollTrigger scroll animations | Lenis inertia smooth-scroll | aurora video backgrounds | split-text reveals | 3D card tilt | fully responsive",
+   "what": "Hand-coded personal portfolio site with cinematic animations and a custom six-layer cursor — no frameworks, no build step. A live personal portfolio site with cinematic motion design, served straight from GitHub Pages with zero build tooling.",
+   "how": "Vanilla JavaScript modules drive GSAP 3 timelines and ScrollTrigger scenes; Lenis handles inertia scrolling and Splitting.js powers per-character text reveals; deployed on GitHub Pages with no bundler.",
+   "outcome": "Live on GitHub Pages; fully responsive and framework-free, demonstrating raw HTML/CSS/JS and animation engineering.",
+   "github": "https://github.com/Gauthambinoy20/gauthambinoy20.github.io"
+  },
+  {
+   "name": "Gnosis — AI Agent Automation Platform",
+   "type": "Full-stack AI Platform",
+   "domains": [
+    "Full-stack AI Platform"
+   ],
+   "stack": [
+    "Python 3.12",
+    "FastAPI",
+    "async SQLAlchemy",
+    "Next.js 16",
+    "TypeScript",
+    "PostgreSQL",
+    "Redis",
+    "FAISS",
+    "Prometheus",
+    "Grafana",
+    "Docker Compose",
+    "Terraform",
+    "AWS ECS",
+    "AWS RDS",
+    "ElastiCache"
+   ],
+   "core_idea": "A production-minded AI agent platform that turns natural-language automation descriptions into deployable agents, with 4-tier memory, self-learning loops, RPA and multi-agent swarms.",
+   "problem": "Non-technical teams cannot build or operate AI agents; Gnosis packages agent creation, memory, learning, execution and monitoring behind one dashboard and one API, without managing LLM providers or infrastructure.",
+   "features": "Agent Factory (natural language to deployment plan) | 4-tier memory (correction, episodic, procedural, semantic) with FAISS retrieval | 3-loop self-learning: instant corrections, pattern extraction, periodic evolution | Dream + Oracle engines for idle-time simulation and cross-agent insights | Universal LLM Gateway (OpenRouter, OpenAI, Anthropic, Ollama) | RPA record/replay, webhooks, schedules, pipelines | SaaS layer: JWT auth, billing/quota guards, feature flags, audit logging, PII controls, rate limiting",
+   "what": "A production-minded AI agent platform that turns natural-language automation descriptions into deployable agents, with 4-tier memory, self-learning loops, RPA and multi-agent swarms. 100+ API modules and 40+ core engines behind a FastAPI /api/v1 layer and a Next.js 16 dashboard: create a user, describe an agent in plain language, queue executions, watch memory and learning evolve.",
+   "how": "FastAPI + async SQLAlchemy backend with REST and WebSocket APIs; Next.js 16 App Router dashboard; PostgreSQL and Redis for state; Prometheus/Grafana observability; hardened middleware (security headers, body limits, rate limits, request IDs); AWS infrastructure written in Terraform (ECS Fargate, RDS, ElastiCache, ALB, CloudFront, WAF, KMS); CI with mocked-LLM tests so the suite runs without provider keys.",
+   "outcome": "A working, tested, deployable SaaS foundation: full local stack in one docker compose up, CI green, security and compliance docs, and a documented AWS deploy path.",
+   "github": "https://github.com/Gauthambinoy20/gnosis"
+  },
+  {
+   "name": "Glyph — Intelligent Codebase Scanner & Chat",
+   "type": "AI / RAG Platform",
+   "domains": [
+    "AI / RAG Platform"
+   ],
+   "stack": [
+    "Python 3.12",
+    "FastAPI",
+    "React 18",
+    "TypeScript",
+    "Vite",
+    "tree-sitter",
+    "Chroma",
+    "fastembed (bge-small)",
+    "Model2Vec",
+    "BM25 + RRF",
+    "cross-encoder reranker",
+    "OpenRouter",
+    "Server-Sent Events",
+    "Docker",
+    "Terraform",
+    "AWS EC2",
+    "Caddy"
+   ],
+   "core_idea": "Ask any codebase a question and get an answer grounded in the real code, with clickable file:line citations.",
+   "problem": "Dropping into an unfamiliar repo costs hours of reading before you can ask a useful question; Glyph indexes the repo and answers only from the actual code, so you verify instead of trust.",
+   "features": "GitHub or local-folder ingest with live progress | AST chunking via tree-sitter (Python/JS/TS/TSX) so citations land on exact line ranges | two-stage retrieval: hybrid semantic + BM25 recall fused with RRF, then a cross-encoder reranker | grounded streaming answers that refuse when relevance is too weak | live dependency graph, most-depended-on files, command palette | Fast mode with Model2Vec static embeddings (about 100x faster ingest)",
+   "what": "Ask any codebase a question and get an answer grounded in the real code, with clickable file:line citations. 19 REST endpoints covering ingest, ask, graph, metrics and file viewing, with per-query observability (latency split, tokens, cache hits).",
+   "how": "FastAPI backend (ingest, chunk, embed, store, retrieve, rerank, answer) and a React/Vite frontend over REST + Server-Sent Events; Chroma vector store keyed per embedding backend; a weekly eval harness in CI clones 5 pinned repos and measures real retrieval hit-rate; continuous deployment pushes images to GHCR and rolls the AWS EC2 stack behind Caddy HTTPS.",
+   "outcome": "LIVE demo online; 487 tests passing at 100% backend AND frontend coverage; measured 82% top-5 retrieval hit-rate across 5 real repos; the reranker lifts top-1 accuracy from 80% to 90%; 6 CI workflows (lint/types, security, CodeQL, Docker, infra, eval) plus automatic deploy on main.",
+   "github": "https://github.com/Gauthambinoy20/Glyph"
+  },
+  {
+   "name": "WARZONE: Last Stand — Neon Browser FPS",
+   "type": "Browser Game (3D)",
+   "domains": [
+    "Browser Game (3D)"
+   ],
+   "stack": [
+    "JavaScript",
+    "Three.js r160",
+    "Vite 6",
+    "Vitest",
+    "UnrealBloom post-processing",
+    "PWA (service worker + manifest)",
+    "GitHub Pages"
+   ],
+   "core_idea": "A neon 80s-Miami wave-survival first-person shooter that runs entirely in the browser: no backend, installable as a PWA, works offline after first load.",
+   "problem": "Shows real-time 3D graphics, game-loop and state-machine engineering in pure JavaScript: a complete game with menus, an economy and combat that anyone can play from a link.",
+   "features": "4 operatives with real stat trade-offs | 7 weapons in distinct primary/secondary loadouts | escalating waves with a boss every 5th wave | 3 difficulty tiers | meta-progression: cash banked across runs, Black Market weapon tiers and perks | combat juice: screen shake, hitstop, slow-mo, kill-streak escalation | 13-screen menu flow driven by a small state-machine router | local leaderboard and achievements",
+   "what": "A neon 80s-Miami wave-survival first-person shooter that runs entirely in the browser: no backend, installable as a PWA, works offline after first load. Boot into a menu hub, pick an operative and loadout, survive waves, bank cash, upgrade at the Black Market, run again stronger; all progress persists in localStorage.",
+   "how": "Three.js r160 scene with EffectComposer + UnrealBloom post-processing; every game rule (weapons, wave scaling, economy, settings) isolated in a pure dependency-free logic module shared by game and menus so displayed data and in-run behaviour can never drift; Vite 6 build deployed to GitHub Pages; hand-rolled PWA.",
+   "outcome": "Fully playable in any modern browser and installable offline; 111 Vitest tests cover the entire pure game-logic module; CI, CodeQL and security scans green.",
+   "github": "https://github.com/Gauthambinoy20/warzone"
+  },
+  {
+   "name": "ClarityAI — Explainable AI-Text Detection",
+   "type": "Full-stack AI/NLP Platform",
+   "domains": [
+    "Full-stack AI/NLP Platform"
+   ],
+   "stack": [
+    "Python 3.12",
+    "FastAPI",
+    "React 18",
+    "TypeScript",
+    "MUI",
+    "SQLite",
+    "Hugging Face Transformers",
+    "GPT-2/GLTR",
+    "nginx",
+    "WebSocket",
+    "Docker Compose",
+    "Terraform",
+    "GitHub Actions"
+   ],
+   "core_idea": "An AI-text detection platform that explains every verdict signal-by-signal: 14 parallel detection signals combined by a stacked ensemble, with a per-sentence heatmap showing where the AI-flavoured passages are.",
+   "problem": "Single-number AI detectors are black boxes; ClarityAI shows exactly which signals fired and why, and adds plagiarism checking, a humanizer and writing analytics so writers and reviewers can act on the result instead of guessing.",
+   "features": "14 parallel deep-detection signals (perplexity/burstiness, GLTR, Fast-DetectGPT, Binoculars, Ghostbuster, zero-shot ensemble, entropy, stylometry, POS patterns, vocabulary richness, repetition, coherence, statistical watermarks, model fingerprints) | stacked meta-learner with a watermark hard-override | per-sentence heatmap + model-family attribution | plagiarism: exact n-grams + semantic embeddings + live source discovery across 6 engines | humanizer rewrite scored before vs after | analytics: readability, tone, grammar, SEO, citations | realtime as-you-type detection over WebSocket | batch processing, history, dashboard, PDF/JSON/CSV export",
+   "what": "An AI-text detection platform that explains every verdict signal-by-signal: 14 parallel detection signals combined by a stacked ensemble, with a per-sentence heatmap showing where the AI-flavoured passages are. About 50 REST endpoints across 9 routers plus a realtime websocket; all 8 UI pages pass axe accessibility checks; every model download is pinned to an exact Hugging Face revision.",
+   "how": "React 18 + MUI SPA served by nginx proxying a FastAPI backend that owns the ML pipeline, SQLite persistence and the websocket; detectors fail soft to a flagged neutral result and an empty roster is a loud 503; GLTR calibration was measured on a labelled probe set and pinned as unit tests; 5 CI workflows (CI, Security, CodeQL, Deploy, Dependabot).",
+   "outcome": "851 tests passing (741 backend + 110 frontend including accessibility), 77% backend coverage gated in CI; runs 100% free locally on open-weight models; AWS/Terraform deployment written and validated (live demo pending).",
+   "github": "https://github.com/Gauthambinoy20/clarity-ai"
+  },
+  {
+   "name": "Orion OS — AI-First Atomic Linux Desktop",
+   "type": "OS / Platform Engineering",
+   "domains": [
+    "OS / Platform Engineering"
+   ],
+   "stack": [
+    "Fedora 43 Atomic (Universal Blue Aurora)",
+    "KDE Plasma 6",
+    "BlueBuild",
+    "OCI/GHCR",
+    "cosign",
+    "syft SBOM",
+    "Calamares",
+    "LUKS2 + TPM2",
+    "SELinux",
+    "firewalld",
+    "Shell",
+    "Just",
+    "Docker"
+   ],
+   "core_idea": "An AI-first, image-based Linux desktop built on Fedora Atomic with KDE Plasma 6: local-first AI designed into every shell surface, zero telemetry, and atomic updates that can never brick the machine.",
+   "problem": "Desktop AI today means cloud lock-in and data harvesting; Orion bakes a local-first AI runtime into the launcher, clipboard, terminal, file search and voice, with cloud strictly opt-in per feature and hard spend caps.",
+   "features": "Declarative BlueBuild recipe builds a signed OCI image and an installable ISO | atomic updates with rollback | supply chain: cosign signatures + syft SBOM + Trivy and Lynis scans in CI | security baseline: SELinux enforcing, firewalld strict, hardened sysctls, DNS-over-HTTPS, restrictive Flatpak, LUKS2+TPM2 full-disk encryption with mandatory passphrase fallback | 12 scoped AI hero features (Copilot, NL launcher, semantic file search, personal RAG, voice control, translate overlay) | every privacy/perf/security promise enforced as a CI test",
+   "what": "An AI-first, image-based Linux desktop built on Fedora Atomic with KDE Plasma 6: local-first AI designed into every shell surface, zero telemetry, and atomic updates that can never brick the machine. Builds a complete, installable, security-hardened Linux distribution from a declarative recipe, with CI producing the signed image and the Calamares ISO.",
+   "how": "A BlueBuild recipe layers Orion modules onto the aurora-dx:43 base image; GitHub Actions runs lint, image build, ISO build, Trivy + Lynis security scans, CodeQL and VM smoke tests; images are published to GHCR and cosign-signed.",
+   "outcome": "Working pre-alpha: signed image and ISO build pipelines green across 6+ CI workflows; frozen ADR-governed stack and full architecture documentation.",
+   "github": "https://github.com/Gauthambinoy20/Orion-OS"
+  },
+  {
+   "name": "Kestrel — Multi-Source Job Discovery Engine",
+   "type": "TypeScript Library + Dashboard",
+   "domains": [
+    "TypeScript Library + Dashboard"
+   ],
+   "stack": [
+    "TypeScript 5.7",
+    "Node 22",
+    "Zod",
+    "React 18",
+    "MUI 6",
+    "Vite",
+    "Vitest",
+    "commander",
+    "Telegram API",
+    "n8n",
+    "GitHub Actions"
+   ],
+   "core_idea": "A pure, typed TypeScript engine that expands one IT domain into 835+ real-world title aliases, sweeps 8 sources across about 220 public ATS boards, verifies every link is live, scores apply-readiness and ranks the best matches.",
+   "problem": "Hunting early-career IT roles means manually checking dozens of noisy boards full of stale or too-senior posts; Kestrel automates the whole sweep and only surfaces verified, genuinely new postings.",
+   "features": "20 locked IT domains expanded into 835+ title aliases | 8 sources / ~220 boards: Greenhouse, Lever, Ashby, RemoteOK keyless plus Adzuna, Jooble, SerpAPI, ScrapeGraphAI key-gated | Zod-validated ingestion; malformed rows quarantined and reported, never silently dropped | seniority filter with word-boundary guards | HEAD-then-GET live-link verification with retry/backoff | deterministic, explainable ranker with per-job score breakdown (no LLM, reproducible and free) | visa/Stamp 1G/sponsorship flags, salary parsing, work-mode, location normalisation, freshness | cross-run dedup via a persistent seen-store | Telegram digest + React/MUI dashboard",
+   "what": "A pure, typed TypeScript engine that expands one IT domain into 835+ real-world title aliases, sweeps 8 sources across about 220 public ATS boards, verifies every link is live, scores apply-readiness and ranks the best matches. The engine is a pure typed library; the CLI, web dashboard and n8n workflow are thin adapters with injected HTTP transport, so every rule is unit-tested in isolation and the same code drives every surface.",
+   "how": "A staged pipeline of pure, separately tested functions (resolve domains, plan requests, run sources concurrently, parse, validate, dedupe, filter, match, verify links, enrich, rank, annotate, deliver) with bounded concurrency, exponential backoff and per-source failure isolation so one dead source never stops a scan.",
+   "outcome": "624 tests (about 97% line coverage) parametrised across all 20 domains and 8 source shapes; production dashboard scores Lighthouse 94 performance / 98 accessibility / 96 best-practices; a recent live run processed 2,450 candidates into 75 matches and 12 ranked verified results.",
+   "github": "https://github.com/Gauthambinoy20/kestrel"
+  },
+  {
+   "name": "Litmus — ATS + AI-Detection Resume Scanner",
+   "type": "Full-stack Web App",
+   "domains": [
+    "Full-stack Web App"
+   ],
+   "stack": [
+    "Python 3.12",
+    "FastAPI",
+    "pydantic v2",
+    "structlog",
+    "React 18",
+    "TypeScript 5",
+    "Vite",
+    "Tailwind CSS",
+    "spaCy",
+    "NLTK",
+    "scikit-learn",
+    "pdfplumber",
+    "python-docx",
+    "reportlab",
+    "Docker",
+    "Vercel"
+   ],
+   "core_idea": "The litmus test a resume takes before any human reads it: ATS compatibility and AI-detection risk scored in one pass, with a prioritized fix for everything it finds.",
+   "problem": "Resumes are filtered twice before a human sees them, once by ATS keyword matching and increasingly by AI-detection tooling; Litmus is a scanner that tests both axes at once and tells you exactly what to fix.",
+   "features": "Dual-axis scan in under 3 seconds | 5-dimension ATS breakdown | 19 explainable AI signals with a per-bullet risk heatmap | fix generator: every finding becomes a concrete suggestion with an example rewrite | humanizer with layered transforms (rule-based + optional free ML paraphrase) | PDF/DOCX upload, bulk scanning, version comparison, PDF report export | grammar and Flesch-Kincaid readability checks | per-IP rate limiting; private by design, nothing stored server-side",
+   "what": "The litmus test a resume takes before any human reads it: ATS compatibility and AI-detection risk scored in one pass, with a prioritized fix for everything it finds. 9 REST endpoints (full scan, file, bulk, quick, compare, humanize, PDF export, keyword extraction, health); scan history lives only in the browser's localStorage; the backend is fully stateless.",
+   "how": "Independent engine modules (ATS, 19-signal AI detection, humanizer, grammar, readability, fix generator, scoring, parsers) with a degraded_mode contract so one failing engine degrades the scan instead of failing it; the ML classifier is one vote of 19, never a dependency, with full offline fallback; the test suite blocks all external HTTP by construction.",
+   "outcome": "145 tests (116 backend + 29 frontend), 79% backend coverage; quick scans return in about 130 ms; CI with gitleaks, Trivy and CodeQL reports 0 known CVEs; Docker, Render and Vercel deploy manifests included.",
+   "github": "https://github.com/Gauthambinoy20/litmus"
+  },
+  {
+   "name": "SkyMetrics — Airline Customer Intelligence",
+   "type": "Data Science / ML Platform",
+   "domains": [
+    "Data Science / ML Platform"
+   ],
+   "stack": [
+    "Python 3.12",
+    "FastAPI",
+    "Streamlit",
+    "scikit-learn",
+    "XGBoost",
+    "SHAP",
+    "TensorFlow/Keras",
+    "TextBlob",
+    "NLTK",
+    "Hugging Face Transformers (DistilBERT)",
+    "pandas",
+    "SQLite",
+    "BeautifulSoup",
+    "OpenSky API",
+    "OpenRouter",
+    "Docker"
+   ],
+   "core_idea": "An airline customer-intelligence platform for British Airways: review sentiment, aspect analysis, topic mining, booking-completion prediction, live flight tracking and a RAG chatbot in one tested product.",
+   "problem": "Airlines sit on a flood of public customer feedback but rarely turn it into decisions; SkyMetrics scores the reviews, predicts booking completion and lets you question the data in natural language.",
+   "features": "TextBlob baseline plus optional DistilBERT transformer sentiment | aspect-based scoring across 7 service aspects (seat, food, staff, delay, baggage, value, wifi) | TF-IDF topic mining | Random Forest booking-completion prediction served over HTTP | XGBoost + SHAP feature-attribution analysis | live airborne BA flights from the OpenSky Network plotted on a map | IAG share-price enrichment | LLM review summariser and a RAG chatbot answering with cited review sources",
+   "what": "An airline customer-intelligence platform for British Airways: review sentiment, aspect analysis, topic mining, booking-completion prediction, live flight tracking and a RAG chatbot in one tested product. 7 API endpoints (sentiment, aspects, live flights, predict, summary, chat, health) plus a Streamlit dashboard; began as the British Airways Forage data-science brief and was expanded into a fully tested, containerised product.",
+   "how": "Scrapers with a fetch/parse split (parsers unit-tested, network mocked) load Skytrax reviews, OpenSky flights and share prices into SQLite; the NLP, ML and LLM layers serve through FastAPI and the Streamlit dashboard consumes the API; TF-IDF retrieval keeps the RAG chatbot deterministic and free; a slim Docker image excludes heavy training dependencies.",
+   "outcome": "81 unit tests with all network and LLM calls mocked; full CI with ruff, mypy, bandit, pip-audit, gitleaks, Trivy and CodeQL; one-command docker compose up runs API and dashboard together.",
+   "github": "https://github.com/Gauthambinoy20/SkyMetrics"
+  },
+  {
+   "name": "PolyCortex — ML Prediction-Market Trading System",
+   "type": "Quant / ML Trading System",
+   "domains": [
+    "Quant / ML Trading System"
+   ],
+   "stack": [
+    "Python 3.11+",
+    "TCN neural net",
+    "scikit-learn",
+    "HMM",
+    "py-clob-client",
+    "Streamlit",
+    "SQLite",
+    "Docker",
+    "Anthropic Claude (sentiment)",
+    "Tavily"
+   ],
+   "core_idea": "A neural trading system for Polymarket prediction markets: Bayesian edge detection plus a TCN neural ensemble, isotonic probability calibration, HMM regime detection and fractional-Kelly sizing with defense-in-depth risk controls.",
+   "problem": "Extracting a tradeable edge from prediction-market prices requires calibrated probabilities, regime awareness and strict risk management; PolyCortex wires all of it into one unattended, fail-safe pipeline.",
+   "features": "Bayesian edge + TCN ensemble, regime-weighted by a 3-state HMM | isotonic probability calibration | features: logit returns, RSI, volume momentum, order-book imbalance, time decay, cross-market | position sizing: fractional Kelly scaled by confidence, volatility and regime, with per-position/portfolio/category caps | 3-tier drawdown circuit breakers: halt new trades at 15%, liquidate at 20% | execution: limit orders, order splitting, TP/SL brackets, GTT, paper mode with partial-fill simulation | full backtester with fees, slippage and spread-impact realism | SQLite P&L, Brier calibration tracking, online signal-weight learner | kill switch, heartbeat and health checks",
+   "what": "A neural trading system for Polymarket prediction markets: Bayesian edge detection plus a TCN neural ensemble, isotonic probability calibration, HMM regime detection and fractional-Kelly sizing with defense-in-depth risk controls. Scans Gamma API markets, reads the CLOB order book, folds in Claude news sentiment (cached), sizes positions and executes through py-clob-client, with a Streamlit dashboard and a JSONL alert stream.",
+   "how": "Event-driven Python orchestrator with an order state machine, WebSocket client, TWAP and trailing stops, batch orders, anomaly detector, graceful shutdown and retry/circuit breakers; Dockerised with a HEALTHCHECK; paper-trading engine simulates partial fills and slippage before any real USDC.",
+   "outcome": "249 tests passing; CI, Security, CodeQL and Docs workflows green; runs unattended in Docker with documented emergency kill-switch procedures.",
+   "github": "https://github.com/Gauthambinoy20/PolyCortex"
+  },
+  {
+   "name": "Meridian — Real-Time Global Intelligence Dashboard",
+   "type": "Web App / Data Platform",
+   "domains": [
+    "Web App / Data Platform"
+   ],
+   "stack": [
+    "Next.js 15 (App Router)",
+    "TypeScript 5.9 strict",
+    "React",
+    "Tailwind CSS",
+    "Framer Motion",
+    "SWR",
+    "Server-Sent Events",
+    "Zod",
+    "Recharts",
+    "react-simple-maps",
+    "Leaflet",
+    "WebGL",
+    "Vitest",
+    "React Testing Library",
+    "Docker",
+    "Vercel",
+    "GitHub Actions"
+   ],
+   "core_idea": "A real-time global intelligence dashboard that aggregates 11+ unreliable public APIs into one validated, cached, failure-isolated interface, live on Vercel.",
+   "problem": "Public data is scattered across inconsistent APIs with rate limits and flaky uptime; Meridian normalises everything through server-side routes with runtime validation and circuit breakers before the browser ever sees it.",
+   "features": "Live world counters (population, emissions, energy, internet activity, economy) | weather, earthquakes, markets, forex, space/ISS, air quality, news and technology tabs | 3D WebGL globe hero | circuit breaker per provider + endpoint-specific cache and revalidation windows | Zod validation of every external response with shared inferred TypeScript types | error boundaries isolate individual tab failures | command palette and keyboard navigation | system-health tab and /api/health-check endpoint used as the deploy smoke test",
+   "what": "A real-time global intelligence dashboard that aggregates 11+ unreliable public APIs into one validated, cached, failure-isolated interface, live on Vercel. Aggregates Open-Meteo, USGS, CoinGecko, Frankfurter, World Bank, REST Countries, NASA, OpenAQ, GitHub, Hacker News and NewsAPI; runs free by default, optional keys unlock richer NASA/news/globe data.",
+   "how": "Every external call goes through Next.js API routes (never the browser) wrapped in a circuit breaker with per-endpoint caching; SWR manages stale-while-revalidate polling per data category; CI runs lint, typecheck, tests and a production build; Dockerfile supports containerised deployment.",
+   "outcome": "Deployed and LIVE at meridian.vercel.app with CI green; the health-check endpoint doubles as the production smoke test after each deploy.",
+   "github": "https://github.com/Gauthambinoy20/meridian"
+  },
+  {
+   "name": "QuantumLedger — AI Stock & Crypto Portfolio Tracker",
+   "type": "Full-stack Fintech Platform",
+   "domains": [
+    "Full-stack Fintech Platform"
+   ],
+   "stack": [
+    "Python 3.11",
+    "FastAPI",
+    "SQLAlchemy 2",
+    "Pydantic",
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "React Native",
+    "scikit-learn",
+    "statsmodels",
+    "yfinance",
+    "CoinGecko",
+    "NewsAPI",
+    "Alpha Vantage",
+    "FRED",
+    "Docker",
+    "Vercel",
+    "Terraform (AWS)",
+    "GitHub Actions"
+   ],
+   "core_idea": "A real-time stock and crypto portfolio tracker with AI-assisted market intelligence: a web SPA plus a React Native mobile client on one FastAPI backend.",
+   "problem": "Investors juggle separate tools for holdings, market data and analysis; QuantumLedger unifies portfolio tracking, live markets, analytics/backtesting and AI insights behind one authenticated API.",
+   "features": "Portfolio: holdings, transactions, P/L, allocation donut, goals and DCA | live markets: stock + crypto search, watchlists, screeners, top gainers/losers | analytics: metrics, risk analysis, backtesting, ML-assisted prediction | AI insights: chat assistant, sentiment radar, smart-money and whale signals | production-shaped: JWT/httpOnly-cookie auth, rate limiting, health checks, Swagger docs | guest mode with a pre-loaded sample portfolio",
+   "what": "A real-time stock and crypto portfolio tracker with AI-assisted market intelligence: a web SPA plus a React Native mobile client on one FastAPI backend. About 38 routers and 21 services on the backend serving both the web SPA and the React Native mobile client with real market data from five providers.",
+   "how": "FastAPI + SQLAlchemy 2 + Pydantic backend; React 18 + Vite + Tailwind SPA and a React Native mobile client; market data from yfinance, CoinGecko, NewsAPI, Alpha Vantage and FRED; infrastructure written as Terraform on AWS with Docker and Vercel manifests and GitHub Actions CI.",
+   "outcome": "A working, tested, deployable full-stack fintech application with web and mobile interfaces: 32 backend tests plus a frontend Vitest suite, self-contained test setup, CI + Security + CodeQL green.",
+   "github": "https://github.com/Gauthambinoy20/quantum-ledger"
+  }
+ ]
+}

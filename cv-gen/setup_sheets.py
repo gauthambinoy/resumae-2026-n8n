@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# Rewrites the 3 tabs to the RICH schema + fills Experience & Education from real data.
+# Projects rows are filled separately by github_corpus_v2.py (gpt-oss-120b).
+import json,urllib.request,urllib.parse
+c=json.load(open("/home/ubuntu/cv-gen/.gsheets.json"))
+SHEET="1ZrGAVXISvMliotzx3WLMDxM5NUIkBcE8u6tC7CCcNx4"
+b=urllib.parse.urlencode({"client_id":c["client_id"],"client_secret":c["client_secret"],"refresh_token":c["refresh_token"],"grant_type":"refresh_token"}).encode()
+T=json.loads(urllib.request.urlopen("https://oauth2.googleapis.com/token",b,timeout=20).read())["access_token"]
+def clear(rng):
+    urllib.request.urlopen(urllib.request.Request("https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s:clear"%(SHEET,urllib.parse.quote(rng)),data=b"{}",method="POST",headers={"Authorization":"Bearer "+T,"Content-Type":"application/json"}),timeout=30).read()
+def put(rng,rows):
+    urllib.request.urlopen(urllib.request.Request("https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s?valueInputOption=RAW"%(SHEET,urllib.parse.quote(rng)),data=json.dumps({"values":rows}).encode(),method="PUT",headers={"Authorization":"Bearer "+T,"Content-Type":"application/json"}),timeout=30).read()
+for t in ("Experience","Education","Projects"): clear(t+"!A1:Z200")
+
+EXP=[
+["Company","Title options","Start","End","Location","Domains","Tech stack","What I built (detail)","How I Build","Key facts / notes"],
+["Outliner AI","Full Stack AI Engineer; AI Engineer; ML Engineer; GenAI Engineer; AI Software Engineer; Software Engineer; Backend Engineer; Python Developer","May 2025","May 2026","Ireland (Hybrid)","AI/LLM, RAG, Agents, Full-stack, Python, AWS","LangChain, LlamaIndex, OpenAI, Anthropic, Pinecone, FAISS, Python, FastAPI, Django, React, Node.js, TypeScript, AWS, Docker","Designed & shipped production AI products end-to-end: LLM assistants + autonomous agents, RAG pipelines, retrieval systems on vector DBs (Pinecone/FAISS) for semantic search; full-stack apps + scalable backends with clean REST/GraphQL APIs + responsive frontends","Prompt engineering, model selection, evaluation & cost optimisation to make AI features production-ready; containerised CI/CD deploys, monitored in prod; worked directly with founders/designers/clients from rough idea to polished release","MOST RECENT (Contract, Hybrid)"],
+["Napblog","AI Automation Engineer; Automation Engineer; AI Engineer","Aug 2024","Jun 2025","Ireland (Hybrid)","AI automation, Agents, Python, LLM","OpenAI, LangChain, Python, FastAPI, serverless functions","Built AI-powered automation systems streamlining content workflows, data pipelines & daily ops; multi-step agent workflows that planned, decided and executed tasks across tools and APIs autonomously","Integrated OpenAI/LangChain/3rd-party services into reliable end-to-end pipelines; Python + FastAPI + serverless across cloud; prompt engineering + model selection + cost optimisation; close work with founders to pick + ship the right automations","Internship"],
+["Cochin Enterprise","Data Engineer; ML Data Engineer; Data Analyst; Analytics Engineer","Dec 2022","May 2024","India (Hybrid)","Data, ETL, SQL, Pipelines","Python, SQL, cloud storage, ETL, relational + analytical DBs","Built + maintained robust data pipelines powering analytics, reporting & business-critical decisions; ETL to ingest/clean/transform large datasets at scale; dashboards + data products turning raw info into insight","Modeled relational/analytical DBs tuned for performance & clear business meaning; worked with stakeholders to translate operational needs into structured queryable data assets; data quality + pipeline monitoring","Foundations that later powered AI-driven systems"],
+["One Team Solutions Edtech","Full-Stack Developer; Software Engineer; Frontend Engineer; Web Developer; Backend Engineer","Aug 2022","Sep 2023","Kochi, India (On-site)","Full-stack web, Frontend, Backend","React, JavaScript, HTML, CSS, Python, Django, Node.js, PostgreSQL, MongoDB","Built full-stack web apps across multiple client projects in education & enterprise; responsive accessible UIs with reusable components; backend services + REST APIs; auth, role-based access, 3rd-party integrations + end-to-end deployment","Clean reusable components; balanced speed, quality & client expectations across many parallel projects; collaborated closely with designers & product owners on tight timelines","On-site"],
+["Sappio Consultancy","Cloud Engineer; DevOps Engineer; AWS Engineer; Platform Engineer; Cloud/Infra Engineer","Feb 2021","Aug 2022","Kochi, India (On-site)","Cloud, AWS, DevOps, IaC","AWS (EC2, S3, Lambda, RDS, IAM, VPC, CloudWatch), CI/CD, IaC, Linux","Designed, deployed & managed cloud infrastructure on AWS for client-facing apps across industries; secure reliable environments; automated deployments + infra provisioning via scripts, CI/CD, infrastructure-as-code","Cost optimisation, performance tuning, monitoring & high availability across production workloads; cloud migrations, architecture reviews & best practices; distributed systems, networking, Linux, cloud security","Part-time"],
+]
+EDU=[
+["Degree","Field","Institution","Start","End","Location","Thesis","Big project","Key modules","Tools learned","Notes"],
+["MSc","Information Systems with Computing","Dublin Business School (DBS)","Sep 2023","Oct 2025","Dublin, Ireland","<< add thesis topic >>","<< add >>","<< add key modules >>","Python, ML, Data, Cloud","<< fill the << >> cells >>"],
+["Diploma","AI/ML Full Stack Python","(Kochi)","","2023","Kochi, India","","<< add >>","AI/ML, Full-stack, Python","Python, ML, FastAPI, React","<< confirm institution >>"],
+["BCA","Computer Applications (Mobile Apps & Cloud Technology)","Sacred Heart College Thevara","Mar 2019","Jul 2022","Kerala, India","<< add capstone >>","<< add >>","Mobile Apps, Cloud Technology","Java, Android, Cloud","-"],
+]
+PROJHDR=[["Name","Type","Core Idea","Problem it solves","Stack","Key features","What it does","How it Does","Outcome","GitHub URL"]]
+put("Experience!A1",EXP); put("Education!A1",EDU); put("Projects!A1",PROJHDR)
+print("schemas rewritten -> Experience %d rows, Education %d rows, Projects header set"%(len(EXP)-1,len(EDU)-1))

@@ -1,0 +1,46 @@
+# ============================================================
+#  SECRETS — NEVER COMMIT THESE. (belt-and-suspenders; the daily
+#  sync already strips them, this is the second line of defence)
+# ============================================================
+# CV-gen credentials
+cv-gen/.gsheets.json
+cv-gen/.claude-auth-state
+cv-gen/credentials/github.token
+cv-gen/credentials/openrouter.key
+cv-gen/credentials/*.token
+cv-gen/credentials/*.key
+
+# n8n env / secrets
+n8n/.env
+n8n/.env.*
+!n8n/.env.example
+
+# Anything that looks like a secret
+*.pem
+*.key
+*.token
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+
+# ============================================================
+#  JUNK — not needed for restore
+# ============================================================
+*.log
+__pycache__/
+*.pyc
+*.tar.gz
+cv-gen/output/
+cv-gen/backups/
+cv-gen/deliverables/
+cv-gen/tmp/
+cv-gen/qa/
+cv-gen/test-jds-*/
+cv-gen/snapshot-*/
+cv-gen/*.bak*
+cv-gen/**/*.bak*
+n8n/*.bak*
+wf-backup*.json
+workflow_backup*.json
