@@ -185,6 +185,11 @@ PROMPT=$(awk '
 
 echo "[ss-claude] prompt_chars=${#PROMPT} jd_chars=${#JD_CLEANED}" >&2
 
+# 2026-07-08: save the EXACT assembled prompt sent to the model for THIS job, so it
+# can be inspected / attached to the delivery email per-CV. Pure side-write with a
+# guard — it can never alter $PROMPT or the model call, and a failure can't abort the run.
+printf '%s' "$PROMPT" > "$OUTPUT_DIR/$JOB_ID.prompt.txt" 2>/dev/null || true
+
 START_TS=$(date +%s)
 STDOUT_TMP="$OUTPUT_DIR/$JOB_ID.stdout"
 export CLAUDE_CODE_MAX_OUTPUT_TOKENS="$OUTPUT_CAP"
@@ -561,13 +566,20 @@ else
 fi
 # --- /CR-VALIDATE
 
+# 2026-07-08: include the EXACT assembled prompt in the envelope so the delivery
+# email can attach it per-CV. Guard: if the file is missing, fall back to empty
+# (/dev/null → jq --rawfile yields "") so this can NEVER break envelope emission.
+PROMPT_FILE="$OUTPUT_DIR/$JOB_ID.prompt.txt"; [ -f "$PROMPT_FILE" ] || PROMPT_FILE=/dev/null
+
 if echo "$CV" | jq -e 'type=="object"' >/dev/null 2>&1; then
   echo "$CV" | jq -c --arg j "$JOB_ID" --arg m "$MODEL" --arg mode "$MODE" --arg tier "$TIER" --arg eff "$EFFORT" --argjson dur "$DUR" \
     --argjson in_tok "$IN_TOK" --argjson out_tok "$OUT_TOK" --argjson cr "$CACHE_READ" --argjson cc "$CACHE_CREATE" --argjson cost "$COST" \
-    '{ok:true} + . + {model:$m, mode:$mode, tier:$tier, effort:$eff, duration_s:$dur, job_id:$j, engine:"claude", generation_mode:"single_shot", _usage:{input_tokens:$in_tok,output_tokens:$out_tok,cache_read:$cr,cache_create:$cc,cost_usd:$cost}}'
+    --rawfile pu "$PROMPT_FILE" \
+    '{ok:true} + . + {model:$m, mode:$mode, tier:$tier, effort:$eff, duration_s:$dur, job_id:$j, engine:"claude", generation_mode:"single_shot", prompt_used:$pu, _usage:{input_tokens:$in_tok,output_tokens:$out_tok,cache_read:$cr,cache_create:$cc,cost_usd:$cost}}'
 else
   jq -cn --arg cv "$CV" --arg j "$JOB_ID" --arg m "$MODEL" --arg mode "$MODE" --arg tier "$TIER" --arg eff "$EFFORT" --argjson dur "$DUR" \
     --argjson in_tok "$IN_TOK" --argjson out_tok "$OUT_TOK" --argjson cr "$CACHE_READ" --argjson cc "$CACHE_CREATE" --argjson cost "$COST" \
-    '{ok:true,cv_content:$cv,model:$m,mode:$mode,tier:$tier,effort:$eff,duration_s:$dur,job_id:$j,engine:"claude",generation_mode:"single_shot",_usage:{input_tokens:$in_tok,output_tokens:$out_tok,cache_read:$cr,cache_create:$cc,cost_usd:$cost}}'
+    --rawfile pu "$PROMPT_FILE" \
+    '{ok:true,cv_content:$cv,model:$m,mode:$mode,tier:$tier,effort:$eff,duration_s:$dur,job_id:$j,engine:"claude",generation_mode:"single_shot",prompt_used:$pu,_usage:{input_tokens:$in_tok,output_tokens:$out_tok,cache_read:$cr,cache_create:$cc,cost_usd:$cost}}'
 fi
 exit 0
