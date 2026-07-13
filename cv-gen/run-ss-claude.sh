@@ -225,12 +225,12 @@ cleanup() {
 trap cleanup EXIT INT TERM
 BACKOFFS=(5 15 30)
 IDLE_KILL_SEC=300
-MAX_ATTEMPT_SEC=600
+MAX_ATTEMPT_SEC=900
 # P1-2: TTFT scales by model (Opus low can warm up to 90s)
 if [[ "$MODEL" == *opus* ]]; then
   TTFT_KILL_SEC=540  # 2026-05-24: bumped for Opus medium reliability
 else
-  TTFT_KILL_SEC=$(( 180 + (${#PROMPT} / 50000) * 30 )); [ "$TTFT_KILL_SEC" -gt 300 ] && TTFT_KILL_SEC=300
+  TTFT_KILL_SEC=$(( 480 + (${#PROMPT} / 50000) * 60 )); [ "$TTFT_KILL_SEC" -gt 720 ] && TTFT_KILL_SEC=720
 fi
 SAMPLE_SEC=10
 
@@ -352,7 +352,7 @@ while [ "$ATTEMPT" -le "$MAX_ATTEMPTS" ]; do
     BACKOFF=${BACKOFFS[$((ATTEMPT-1))]}
     case "$ERR_TAG" in RATE_LIMIT_*) BACKOFF=$((BACKOFF * 4)) ;; esac
     if [[ "$MODEL" != *opus* ]] && [ "$TTFT_KILL_SEC" -lt 300 ]; then
-      TTFT_KILL_SEC=$((TTFT_KILL_SEC + 60)); [ "$TTFT_KILL_SEC" -gt 300 ] && TTFT_KILL_SEC=300
+      TTFT_KILL_SEC=$((TTFT_KILL_SEC + 60)); [ "$TTFT_KILL_SEC" -gt 720 ] && TTFT_KILL_SEC=720
       echo "[ss-claude] widened TTFT to ${TTFT_KILL_SEC}s for next retry" >&2
     fi
     echo "[ss-claude] retrying in ${BACKOFF}s (model: $MODEL)..." >&2
