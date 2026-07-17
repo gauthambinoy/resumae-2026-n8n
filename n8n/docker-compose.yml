@@ -27,11 +27,11 @@ services:
     ports:
       - "127.0.0.1:5678:5678"
     environment:
-      - N8N_HOST=n8n.34.248.143.39.nip.io
+      - N8N_HOST=n8n.54.72.60.242.nip.io
       - N8N_PORT=5678
       - N8N_PROTOCOL=https
-      - WEBHOOK_URL=https://n8n.34.248.143.39.nip.io/
-      - N8N_EDITOR_BASE_URL=https://n8n.34.248.143.39.nip.io/
+      - WEBHOOK_URL=https://n8n.54.72.60.242.nip.io/
+      - N8N_EDITOR_BASE_URL=https://n8n.54.72.60.242.nip.io/
       - GENERIC_TIMEZONE=Europe/Dublin
       - TZ=Europe/Dublin
       - N8N_LOG_LEVEL=info
