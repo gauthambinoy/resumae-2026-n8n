@@ -71,7 +71,7 @@ Full step-by-step (with the sharp edges called out) is in **[`RESTORE.md`](RESTO
 
 ```bash
 # 1. Clone
-git clone https://github.com/gauthambinoy/top-resumae-2026-n8n.git ~/resumae && cd ~/resumae
+git clone https://github.com/gauthambinoy/resumae-2026-n8n.git ~/resumae && cd ~/resumae
 
 # 2. Build the custom n8n image (n8n + Python in one image — it is NOT on any registry)
 docker build -t local/n8n-python:2.16.1 n8n/
@@ -229,7 +229,7 @@ Two host-only files are also **not** in the backup and must be recreated on rest
 ## Repo layout
 
 ```
-top-resumae-2026-n8n/
+resumae-2026-n8n/
 ├── README.md                  ← you are here
 ├── RESTORE.md                 disaster-recovery runbook (read before rebuilding)
 ├── ROADMAP.md                 build history & plan  (internal log)
