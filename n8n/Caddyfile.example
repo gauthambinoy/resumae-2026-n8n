@@ -1,0 +1,24 @@
+# Caddyfile — HTTPS front door for n8n (TEMPLATE).
+#
+# WHY this exists: in docker-compose.yml the n8n container binds to
+# 127.0.0.1:5678 only, so it is NOT reachable from the internet on its own.
+# Caddy runs on the HOST (not in Docker), terminates TLS with a free
+# Let's Encrypt certificate, and reverse-proxies to n8n. The original
+# Caddyfile lived only on the AWS box and is not in any backup — this
+# template reproduces it. Install: put this at /etc/caddy/Caddyfile,
+# edit the domain, then `sudo systemctl reload caddy`.
+#
+# The old box used an nip.io hostname pinned to its Elastic IP, e.g.
+# n8n.54.72.60.242.nip.io — replace with your box's IP or a real domain.
+
+your-domain-or-nip-io-host {
+    reverse_proxy 127.0.0.1:5678
+
+    # n8n sits behind one proxy hop; keep it in sync with N8N_PROXY_HOPS=1.
+    encode zstd gzip
+
+    # Larger uploads (JD pastes, generated docs) — bump if needed.
+    request_body {
+        max_size 25MB
+    }
+}
